@@ -42,8 +42,7 @@ public class SearchPage extends TestBase {
 
     public static void verify_english_language_link_available() {
         WebElement language = driver.findElement(By.linkText("English"));
-        language.click();
-        String title = driver.getTitle();
-        Assert.assertTrue(title.contains("Earth"));
+        String text = language.getAttribute("innerText");
+        Assert.assertTrue(text.equalsIgnoreCase("english"));
     }
 }
