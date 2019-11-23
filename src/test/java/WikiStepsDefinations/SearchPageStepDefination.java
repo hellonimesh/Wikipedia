@@ -48,4 +48,9 @@ public class SearchPageStepDefination extends TestBase {
         TestBase.browser_initialization();
         LandingPage.searchForKeyword(keyword);
     }
+
+    @And("^User verify that there is an English language option on Search result page$")
+    public void userVerifyThatThereIsAnEnglishLanguageOptionOnSearchResultPage() {
+        SearchPage.verify_english_language_link_available();
+    }
 }

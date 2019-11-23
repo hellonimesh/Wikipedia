@@ -24,6 +24,7 @@ Feature: Landing Page functionality validation - Wikipedia
     When User select "hi" as a Language
     When User enter any keyword like "पृथ्वी"
     Then User see "पृथ्वी" on Search Result Page
+    And User verify that there is an English language option on Search result page
     And User quite the browser
 
 

@@ -24,8 +24,7 @@ public class SearchPage extends TestBase {
     public static void validating_Other_Language_Option_Available() {
 
         WebElement languageOption = driver.findElement(By.id("p-lang-label"));
-        if (languageOption.getAttribute("innerText").equals("Languages")) {
-        }
+        Assert.assertEquals("Languages", languageOption.getAttribute("innerText"));
     }
 
     public static void validate_More_Then_One_Language_Available() {
@@ -39,5 +38,12 @@ public class SearchPage extends TestBase {
 
     public static void navigate_back() {
         driver.navigate().back();
+    }
+
+    public static void verify_english_language_link_available() {
+        WebElement language = driver.findElement(By.linkText("English"));
+        language.click();
+        String title = driver.getTitle();
+        Assert.assertTrue(title.contains("Earth"));
     }
 }
