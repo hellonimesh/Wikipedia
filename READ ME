@@ -1,0 +1,2 @@
+1: This is a UI test using Page Object model for Wikipedia Landing and Search Page using JVM and Cucumber for BDD framework
+2: Make a note to change the ChromDriver path to launch the browser in the test added to GIT as a part of the evaluation process.replace it with your own path of the file structure you have on your computer for this project.
